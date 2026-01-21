@@ -27,20 +27,12 @@
       --transition-med: 0.4s ease-out;
     }
 
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-    }
-
-    html {
-      scroll-behavior: smooth;
-    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
 
     body {
-      font-family: "Space Grotesk", system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
-      background:
-        radial-gradient(circle at top, #0f172a 0, #020617 55%, #020617 100%);
+      font-family: "Space Grotesk", system-ui, -apple-systemig, BlinkMacSystemFont, sans-serif;
+      background: radial-gradient(circle at top, #0f172a 0, #020617 55%, #020617 100%);
       color: var(--text);
       min-height: 100vh;
       -webkit-font-smoothing: antialiased;
@@ -84,12 +76,8 @@
     }
 
     @keyframes blob-move {
-      from {
-        transform: translate3d(0, 0, 0) scale(1);
-      }
-      to {
-        transform: translate3d(40px, -30px, 0) scale(1.15);
-      }
+      from { transform: translate3d(0, 0, 0) scale(1); }
+      to { transform: translate3d(40px, -30px, 0) scale(1.15); }
     }
 
     .page {
@@ -101,7 +89,6 @@
     }
 
     /* HEADER */
-
     header {
       position: sticky;
       top: 1.2rem;
@@ -122,11 +109,7 @@
       backdrop-filter: blur(18px);
     }
 
-    .brand {
-      display: flex;
-      align-items: center;
-      gap: 0.75rem;
-    }
+    .brand { display: flex; align-items: center; gap: 0.75rem; }
 
     .logo-mark {
       width: 42px;
@@ -138,8 +121,7 @@
       font-weight: 700;
       letter-spacing: 0.12em;
       font-size: 1rem;
-      background:
-        conic-gradient(from 140deg, var(--accent), var(--accent-pink), #22c55e, var(--accent));
+      background: conic-gradient(from 140deg, var(--accent), var(--accent-pink), #22c55e, var(--accent));
       color: #020617;
       box-shadow: var(--shadow-glow);
       position: relative;
@@ -156,11 +138,7 @@
       mix-blend-mode: screen;
     }
 
-    .brand-main {
-      display: flex;
-      flex-direction: column;
-      gap: 0.1rem;
-    }
+    .brand-main { display: flex; flex-direction: column; gap: 0.1rem; }
 
     .brand-title {
       font-size: 1.05rem;
@@ -169,16 +147,9 @@
       text-transform: uppercase;
     }
 
-    .brand-sub {
-      font-size: 0.78rem;
-      color: var(--muted);
-    }
+    .brand-sub { font-size: 0.78rem; color: var(--muted); }
 
-    nav {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 0.4rem;
-    }
+    nav { display: flex; flex-wrap: wrap; gap: 0.4rem; }
 
     nav a {
       font-size: 0.8rem;
@@ -203,7 +174,6 @@
     }
 
     /* HERO */
-
     .hero {
       margin-top: 0.4rem;
       min-height: 78vh;
@@ -323,10 +293,7 @@
       opacity: 0.85;
     }
 
-    .hero-top-bar-dots {
-      display: flex;
-      gap: 0.25rem;
-    }
+    .hero-top-bar-dots { display: flex; gap: 0.25rem; }
     .hero-top-bar-dots span {
       width: 7px;
       height: 7px;
@@ -341,55 +308,19 @@
       position: relative;
       border-radius: 16px;
       overflow: hidden;
-      background:
-        radial-gradient(circle at top, rgba(56, 189, 248, 0.28), rgba(15, 23, 42, 0.96));
+      background: radial-gradient(circle at top, rgba(56, 189, 248, 0.28), rgba(15, 23, 42, 0.96));
       border: 1px solid rgba(56, 189, 248, 0.5);
       box-shadow: inset 0 0 60px rgba(15, 23, 42, 0.9);
       height: 230px;
     }
 
-    /* simple "Rain" effect */
-    .drop {
-      position: absolute;
-      width: 2px;
-      height: 22px;
-      background: linear-gradient(to bottom, rgba(248, 250, 252, 0.25), rgba(56, 189, 248, 0.85));
-      opacity: 0.7;
-      border-radius: 999px;
-      animation: drop-fall linear infinite;
-      transform-origin: top;
-    }
-
-    .drop:nth-child(1) { left: 8%; animation-duration: 1.5s; animation-delay: -0.2s; }
-    .drop:nth-child(2) { left: 22%; animation-duration: 1.9s; animation-delay: -0.8s; }
-    .drop:nth-child(3) { left: 37%; animation-duration: 1.4s; animation-delay: -0.5s; }
-    .drop:nth-child(4) { left: 52%; animation-duration: 1.7s; animation-delay: -1.1s; }
-    .drop:nth-child(5) { left: 66%; animation-duration: 2.1s; animation-delay: -0.4s; }
-    .drop:nth-child(6) { left: 79%; animation-duration: 1.6s; animation-delay: -0.9s; }
-    .drop:nth-child(7) { left: 90%; animation-duration: 2.3s; animation-delay: -1.3s; }
-    .drop:nth-child(8) { left: 30%; animation-duration: 1.8s; animation-delay: -1.6s; }
-
-    .body-mask {
-      position: absolute;
-      inset: auto 20% 4%;
-      height: 44%;
-      border-radius: 999px 999px 0 0;
-      border: 1px solid rgba(248, 250, 252, 0.3);
-      box-shadow:
-        0 0 40px rgba(56, 189, 248, 0.45),
-        0 0 0 1px rgba(15, 23, 42, 0.9);
-      background:
-        radial-gradient(circle at 25% 20%, rgba(248, 250, 252, 0.95) 0, transparent 52%),
-        radial-gradient(circle at 75% 20%, rgba(248, 250, 252, 0.95) 0, transparent 52%);
-      opacity: 0.92;
-      mix-blend-mode: screen;
-      backdrop-filter: blur(10px);
-    }
-
-    @keyframes drop-fall {
-      from { transform: translate3d(0, -130%, 0) scaleY(1); opacity: 0; }
-      30% { opacity: 1; }
-      to { transform: translate3d(0, 135%, 0) scaleY(1.1); opacity: 0; }
+    /* VIDEO im Hero */
+    .rain-canvas video {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      border-radius: 16px;
+      display: block;
     }
 
     .hero-visual-caption {
@@ -417,7 +348,6 @@
     }
 
     /* MAIN & SECTIONS */
-
     main {
       margin-top: 2.6rem;
       display: flex;
@@ -444,10 +374,7 @@
       pointer-events: none;
     }
 
-    section > * {
-      position: relative;
-      z-index: 2;
-    }
+    section > * { position: relative; z-index: 2; }
 
     section h2 {
       font-size: 1.25rem;
@@ -465,10 +392,7 @@
       color: #c7d2fe;
     }
 
-    p {
-      font-size: 0.94rem;
-      color: var(--muted);
-    }
+    p { font-size: 0.94rem; color: var(--muted); }
 
     .two-col {
       display: grid;
@@ -520,10 +444,7 @@
       margin-bottom: 0.5rem;
     }
 
-    .card ul {
-      list-style: none;
-      margin-top: 0.25rem;
-    }
+    .card ul { list-style: none; margin-top: 0.25rem; }
 
     .card ul li {
       font-size: 0.88rem;
@@ -558,12 +479,7 @@
       margin-bottom: 0.5rem;
     }
 
-    .pill-dot {
-      width: 6px;
-      height: 6px;
-      border-radius: 999px;
-      background: var(--accent);
-    }
+    .pill-dot { width: 6px; height: 6px; border-radius: 999px; background: var(--accent); }
 
     .tag-row {
       display: flex;
@@ -602,7 +518,6 @@
     }
 
     /* TIMELINE */
-
     .milestones-grid {
       display: grid;
       grid-template-columns: minmax(0, 1.1fr) minmax(0, 1.7fr);
@@ -623,11 +538,7 @@
       border-bottom: 1px dashed rgba(51, 65, 85, 0.9);
     }
 
-    .timeline-item:last-child {
-      border-bottom: none;
-      padding-bottom: 0;
-      margin-bottom: 0;
-    }
+    .timeline-item:last-child { border-bottom: none; padding-bottom: 0; margin-bottom: 0; }
 
     .timeline-week {
       font-size: 0.8rem;
@@ -652,10 +563,7 @@
         0 0 20px rgba(56, 189, 248, 0.6);
     }
 
-    .timeline-text {
-      font-size: 0.9rem;
-      color: var(--muted);
-    }
+    .timeline-text { font-size: 0.9rem; color: var(--muted); }
 
     footer {
       margin-top: 2.4rem;
@@ -665,29 +573,70 @@
       opacity: 0.7;
     }
 
+    /* TouchDesigner Overview Image */
+    .td-overview { margin-top: 0.9rem; }
+
+    .td-figure {
+      margin-top: 0.9rem;
+      border-radius: var(--radius-xl);
+      border: 1px solid rgba(148, 163, 184, 0.55);
+      background: radial-gradient(circle at top, rgba(15, 23, 42, 0.55), rgba(15, 23, 42, 0.95));
+      box-shadow: var(--shadow-soft);
+      overflow: hidden;
+      position: relative;
+    }
+
+    .td-figure::before {
+      content: "";
+      position: absolute;
+      inset: -30%;
+      background:
+        radial-gradient(circle at 10% 20%, rgba(56, 189, 248, 0.22), transparent 55%),
+        radial-gradient(circle at 80% 0%, rgba(232, 121, 249, 0.18), transparent 55%);
+      opacity: 0.85;
+      mix-blend-mode: screen;
+      pointer-events: none;
+    }
+
+    .td-figure a { display: block; position: relative; z-index: 2; }
+    .td-figure img {
+      width: 100%;
+      height: auto;
+      display: block;
+      border-radius: calc(var(--radius-xl) - 2px);
+    }
+
+    .td-figcaption {
+      position: relative;
+      z-index: 2;
+      padding: 0.85rem 1rem 1rem;
+      border-top: 1px solid rgba(148, 163, 184, 0.25);
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.6rem;
+      align-items: center;
+      justify-content: space-between;
+      color: var(--muted);
+      font-size: 0.82rem;
+    }
+
+    .td-figcaption .left { display: inline-flex; align-items: center; gap: 0.45rem; }
+    .td-figcaption .dot {
+      width: 7px;
+      height: 7px;
+      border-radius: 999px;
+      background: var(--accent);
+      box-shadow: 0 0 12px var(--accent);
+    }
+    .td-figcaption .hint { opacity: 0.9; }
+
     /* RESPONSIVE */
-
     @media (max-width: 980px) {
-      .hero {
-        grid-template-columns: minmax(0, 1fr);
-        min-height: auto;
-      }
-
-      .hero-visual {
-        order: -1;
-      }
-
-      .milestones-grid {
-        grid-template-columns: minmax(0, 1fr);
-      }
-
-      .system-columns {
-        grid-template-columns: minmax(0, 1fr);
-      }
-
-      .page {
-        padding-inline: 1.1rem;
-      }
+      .hero { grid-template-columns: minmax(0, 1fr); min-height: auto; }
+      .hero-visual { order: -1; }
+      .milestones-grid { grid-template-columns: minmax(0, 1fr); }
+      .system-columns { grid-template-columns: minmax(0, 1fr); }
+      .page { padding-inline: 1.1rem; }
     }
 
     @media (max-width: 720px) {
@@ -697,24 +646,10 @@
         border-radius: 22px;
         padding-inline: 0.95rem;
       }
-
-      nav {
-        width: 100%;
-        justify-content: flex-start;
-        flex-wrap: wrap;
-      }
-
-      section {
-        padding-inline: 1.15rem;
-      }
-
-      .two-col {
-        grid-template-columns: minmax(0, 1fr);
-      }
-
-      .hero-text h1 {
-        font-size: 2.3rem;
-      }
+      nav { width: 100%; justify-content: flex-start; flex-wrap: wrap; }
+      section { padding-inline: 1.15rem; }
+      .two-col { grid-template-columns: minmax(0, 1fr); }
+      .hero-text h1 { font-size: 2.3rem; }
     }
 
     @media (prefers-reduced-motion: reduce) {
@@ -727,6 +662,7 @@
     }
   </style>
 </head>
+
 <body>
   <div class="bg-blobs">
     <div class="blob blob-1"></div>
@@ -781,27 +717,22 @@
             <div class="hero-top-bar-dots">
               <span></span><span></span><span></span>
             </div>
-            <span>Live · Particle Collision Preview</span>
+            <span>Live · Video Preview</span>
           </div>
 
+          <!-- VIDEO statt Animation -->
           <div class="rain-canvas">
-            <!-- simple "rain" drops -->
-            <div class="drop"></div>
-            <div class="drop"></div>
-            <div class="drop"></div>
-            <div class="drop"></div>
-            <div class="drop"></div>
-            <div class="drop"></div>
-            <div class="drop"></div>
-            <div class="drop"></div>
-
-            <!-- simplified body mask -->
-            <div class="body-mask"></div>
+            <video
+              src="assets/video/rainforce-demo.mp4"
+              autoplay
+              muted
+              loop
+              playsinline
+            ></video>
           </div>
 
           <div class="hero-visual-caption">
-            <span><span class="hero-dot"></span> Reaktive Regenpartikel in Echtzeit</span>
-            <span>Kollision, Ablenkung & dynamische Veränderung durch die Körpermaske</span>
+            <span><span class="hero-dot"></span> Demo-Video</span>
           </div>
         </div>
       </div>
@@ -850,7 +781,6 @@
         </p>
 
         <div class="system-columns">
-          <!-- Input -->
           <div class="card">
             <div class="card-title">01 · Input</div>
             <div class="card-sub">Körpererkennung</div>
@@ -861,7 +791,6 @@
             </ul>
           </div>
 
-          <!-- Processing -->
           <div class="card">
             <div class="card-title">02 · Processing</div>
             <div class="card-sub">TouchDesigner Netzwerk</div>
@@ -873,7 +802,6 @@
             </ul>
           </div>
 
-          <!-- Output -->
           <div class="card">
             <div class="card-title">03 · Output</div>
             <div class="card-sub">Visuelles Feedback</div>
@@ -928,10 +856,34 @@ Camera In TOP
               └─ Kollisionslogik mit Maske
                   └─ Composite TOP      →  Projektion des finalen Regens
         </div>
+
         <p class="footnote">
           Durch die Kombination der MediaPipe-Daten mit der Maskenlogik entsteht eine relativ robuste
           Erkennung des Nutzers – selbst bei wechselnden Lichtverhältnissen oder bewegtem Hintergrund.
         </p>
+
+        <!-- TouchDesigner Screenshot Overview -->
+        <div class="td-overview">
+          <div class="pill">
+            <span class="pill-dot"></span>
+            Überblick: TouchDesigner Netzwerk
+          </div>
+
+          <figure class="td-figure">
+            <a href="assets/img/touchdesigner-overview.png" target="_blank" rel="noopener">
+              <img
+                src="assets/img/touchdesigner-overview.png"
+                alt="TouchDesigner Netzwerkübersicht – Rainforce Patch"
+                loading="lazy"
+              />
+            </a>
+
+            <figcaption class="td-figcaption">
+              <span class="left"><span class="dot"></span> Netzwerk-Overview: Input → Processing → Output</span>
+              <span class="hint">Klicken für Vollansicht</span>
+            </figcaption>
+          </figure>
+        </div>
       </section>
 
       <section id="milestones">
@@ -1022,7 +974,14 @@ Camera In TOP
               <div class="timeline-week">Woche 9</div>
               <div class="timeline-text">
                 Übertragen der vereinfachten Kollisionslogik auf das „echte“ Projekt mit
-                voller Körpermaske und Live-Tracking.
+                voller Körpermaske und Live-Tracking, Einarbeitung in GLSL und NV-FLex-Solver, Testen und Vergleichen von "normaler" Webcam und einer Azure Kinect.
+              </div>
+            </div>
+
+            <div class="timeline-item">
+              <div class="timeline-week">Woche 10</div>
+              <div class="timeline-text">
+                Remake von RainForce zu BallForce mit bunten Bällen, die bouncen statt Regen, der sich zu Wasser verflüssigt.
               </div>
             </div>
           </div>
